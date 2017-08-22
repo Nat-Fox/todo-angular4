@@ -1,0 +1,19 @@
+<h3>To Do List</h3>
+
+<md-input-container>
+    <input mdInput [(ngModel)]="newTodo" placeholder="Add Task" value="Task">
+</md-input-container>
+
+<!-- <input name="task"  type="text"> -->
+<button md-mini-fab (click)="addNewTodo()"><md-icon>exposure_plus_1</md-icon></button>
+<!-- <button (click)="addNewTodo()">Agregar</button> -->
+
+
+<ul>
+    <!-- iteracion, el element es cada tarea del todo -->
+    <li *ngFor="let element of todo">
+        {{element}}
+        <button md-mini-fab (click)="deleteFromTodo(element)"><md-icon>delete</md-icon></button>
+        <!-- {{element}} <button (click)="deleteFromTodo(element)" type="">x</button> -->
+    </li>
+</ul>
